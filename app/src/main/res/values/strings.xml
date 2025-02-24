@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">蓝牙遥控</string>
+    <string name="button_b">B</string>
+    <string name="button_n">N</string>
+    <string name="button_m">M</string>
+    <string name="button_v">V</string>
+    <string name="button_up">↑</string>
+    <string name="button_down">↓</string>
+    <string name="button_left">←</string>
+    <string name="button_right">→</string>
+</resources>

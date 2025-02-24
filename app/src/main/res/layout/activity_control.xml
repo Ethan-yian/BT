@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <!-- 能量条 -->
+    <ProgressBar
+        android:id="@+id/energyBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:max="100"
+        android:progressDrawable="@drawable/custom_energy_bar"
+        android:elevation="4dp"
+        android:padding="2dp"/>
+
+    <!-- 顶部三个圆形按钮 -->
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/circle_button"
+        android:clickable="true"
+        android:text="B" />
+
+    <Button
+        android:id="@+id/buttonN"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/circle_button"
+        android:clickable="true"
+        android:text="N" />
+
+    <Button
+        android:id="@+id/buttonM"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/circle_button"
+        android:clickable="true"
+        android:text="M" />
+
+    <!-- 方向按钮组 -->
+    <Button
+        android:id="@+id/buttonW"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rectangle_button"
+        android:clickable="true"
+        android:text="↑" />
+
+    <Button
+        android:id="@+id/buttonS"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rectangle_button"
+        android:clickable="true"
+        android:text="↓" />
+
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rectangle_button"
+        android:clickable="true"
+        android:text="←" />
+
+    <Button
+        android:id="@+id/buttonD"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rectangle_button"
+        android:clickable="true"
+        android:text="→" />
+
+
+    <!-- V按钮 -->
+    <Button
+        android:id="@+id/buttonV"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rectangle_button"
+        android:clickable="true"
+        android:text="V" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="添加按钮"
+        android:visibility="gone"/>
+</RelativeLayout>
