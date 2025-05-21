@@ -13,7 +13,7 @@ android {
         minSdk = 28
         targetSdk = 34
         versionCode = 1
-        versionName = "3.2.0项目暂停"
+        versionName = "开发者：译岸"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

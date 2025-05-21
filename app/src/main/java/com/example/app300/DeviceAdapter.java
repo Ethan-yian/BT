@@ -15,7 +15,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.app300.BTserver.BluetoothService;
-import com.example.app300.activity.MainActivity;
 import java.util.List;
 
 public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ViewHolder> {

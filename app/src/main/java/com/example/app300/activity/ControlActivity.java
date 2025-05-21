@@ -13,7 +13,6 @@ import android.os.Build;
 
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
-import android.animation.ObjectAnimator;
 import android.view.Window;
 import android.view.Gravity;
 import android.widget.TextView;
@@ -26,11 +25,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.graphics.drawable.ClipDrawable;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.LayerDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -40,7 +34,6 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -1101,24 +1094,39 @@ public class ControlActivity extends AppCompatActivity implements BluetoothServi
         }
     }
 
+    // 修改现有的 onKeyDown 方法
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
-            safeSendBluetoothMessage("O");
-            vibrateDevice(100);
-            return true;
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_VOLUME_UP:
+                safeSendBluetoothMessage("O");
+                vibrateDevice(100);
+                return true;
+            case KeyEvent.KEYCODE_VOLUME_DOWN:    // 添加音量减少键处理
+                safeSendBluetoothMessage("Q");
+                vibrateDevice(100);
+                return true;
+            default:
+                return super.onKeyDown(keyCode, event);
         }
-        return super.onKeyDown(keyCode, event);
     }
 
+    // 修改现有的 onKeyUp 方法
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
-            safeSendBluetoothMessage("P");
-            return true;
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_VOLUME_UP:
+                safeSendBluetoothMessage("P");
+                return true;
+            case KeyEvent.KEYCODE_VOLUME_DOWN:    // 添加音量减少键处理
+                safeSendBluetoothMessage("X");
+                return true;
+            default:
+                return super.onKeyUp(keyCode, event);
         }
-        return super.onKeyUp(keyCode, event);
     }
+
+
 
     @Override
     protected void onDestroy() {

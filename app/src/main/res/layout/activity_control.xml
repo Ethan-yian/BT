@@ -27,14 +27,14 @@
         android:background="@drawable/circle_button"
         android:clickable="true"
         android:text="B" />
-
+    <!-- N_-   M_+ -->
     <Button
         android:id="@+id/buttonN"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/circle_button"
         android:clickable="true"
-        android:text="N" />
+        android:text="-" />
 
     <Button
         android:id="@+id/buttonM"
@@ -42,7 +42,7 @@
         android:layout_height="50dp"
         android:background="@drawable/circle_button"
         android:clickable="true"
-        android:text="M" />
+        android:text="+" />
 
     <!-- 方向按钮组 -->
     <Button
