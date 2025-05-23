@@ -20,13 +20,25 @@
         android:padding="2dp"/>
 
     <!-- 顶部三个圆形按钮 -->
+
+    <Button
+        android:id="@+id/buttonE"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/circle_button"
+        android:clickable="true"
+        android:drawableTop="@drawable/ic_fan"
+        android:padding="12dp" />
+
     <Button
         android:id="@+id/buttonB"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/circle_button"
         android:clickable="true"
-        android:text="B" />
+        android:drawableTop="@drawable/ic_light_bulb"
+        android:padding="12dp" />
+
     <!-- N_-   M_+ -->
     <Button
         android:id="@+id/buttonN"

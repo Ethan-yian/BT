@@ -53,7 +53,7 @@ public class ControlActivity extends AppCompatActivity implements BluetoothServi
     private static final String TAG = "ControlActivity";
     private static final String PREFS_NAME = "ControlLayout";
     private static final int PERMISSION_REQUEST_CODE = 1001;
-    private static final String KEY_FIRST_TIME = "isFirstTime"; // 添加首次运行标记的key
+    private static final String KEY_FIRST_TIME = "isFirstTime";
     private static final String[] REQUIRED_PERMISSIONS = {
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE
@@ -560,6 +560,7 @@ public class ControlActivity extends AppCompatActivity implements BluetoothServi
             controlComponents.put(R.id.buttonB, findViewById(R.id.buttonB));
             controlComponents.put(R.id.buttonN, findViewById(R.id.buttonN));
             controlComponents.put(R.id.buttonM, findViewById(R.id.buttonM));
+            controlComponents.put(R.id.buttonE, findViewById(R.id.buttonE));
 
             if (isEditMode) {
                 if (isFirstTimeSetup) {
@@ -633,6 +634,7 @@ public class ControlActivity extends AppCompatActivity implements BluetoothServi
             View buttonB = controlComponents.get(R.id.buttonB);
             View buttonN = controlComponents.get(R.id.buttonN);
             View buttonM = controlComponents.get(R.id.buttonM);
+            View buttonE = controlComponents.get(R.id.buttonE);
 
             int centerX = getResources().getDisplayMetrics().widthPixels / 2;
             if (buttonB != null) {
@@ -646,6 +648,10 @@ public class ControlActivity extends AppCompatActivity implements BluetoothServi
             if (buttonM != null) {
                 buttonM.setX(centerX + 70);
                 buttonM.setY(20);
+            }
+            if (buttonE != null) {  //
+                buttonE.setX(centerX + 165);
+                buttonE.setY(20);
             }
             // 设置V按钮位置
             View buttonV = controlComponents.get(R.id.buttonV);
@@ -818,6 +824,7 @@ public class ControlActivity extends AppCompatActivity implements BluetoothServi
             setupCircleButton(R.id.buttonB, "B");
             setupCircleButton(R.id.buttonN, "N");
             setupCircleButton(R.id.buttonM, "M");
+            setupCircleButton(R.id.buttonE, "E");
 
             // 设置方向按钮
             setupDirectionalButton(R.id.buttonW, "W", "H");
